@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Start Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="data:image/png;base64,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"
+    />
+    <!-- End Favicon  -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stephanie Cunnane</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script type="module" crossorigin src="/assets/index.70e8a50b.js"></script>
+    <link rel="stylesheet" href="/assets/index.248b2eda.css" />
+  </head>
+  <body>
+    <!-- Contact Buttons -->
+    <div class="flex flex-col fixed z-50 w-12 text-2xl space-y-2 top-3 right-3">
+      <a
+        href="#"
+        id="menu"
+        class="
+          flex
+          h-12
+          items-center
+          shadow-md
+          justify-center
+          font-medium
+          rounded-md
+          text-white
+          bg-midnightblue
+          hover:bg-gray-600
+        "
+      >
+        <i class="fas fa-bars"></i>
+      </a>
+      <a
+        href="mailto:stephanie.cunnane@gmail.com"
+        class="
+          menuItem
+          flex
+          h-12
+          items-center
+          shadow-md
+          justify-center
+          border border-transparent
+          font-medium
+          rounded-full
+          text-white
+          bg-midnightblue
+          hover:bg-gray-600
+        "
+        target="_blank"
+      >
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/stephaniecunnane/"
+        class="
+          menuItem
+          flex
+          h-12
+          items-center
+          shadow-md
+          justify-center
+          border border-transparent
+          font-medium
+          rounded-full
+          text-white
+          bg-midnightblue
+          hover:bg-gray-600
+        "
+        target="_blank"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a
+        href="https://github.com/StephanieCunnane"
+        class="
+          menuItem
+          flex
+          h-12
+          items-center
+          shadow-md
+          justify-center
+          border border-transparent
+          font-medium
+          rounded-full
+          text-white
+          bg-midnightblue
+          hover:bg-gray-600
+        "
+        target="_blank"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="assets/Stephanie_L_Cunnane_Resume.pdf"
+        target="_blank"
+        class="
+          menuItem
+          flex
+          h-12
+          items-center
+          shadow-md
+          justify-center
+          border border-transparent
+          font-medium
+          rounded-full
+          text-white
+          bg-midnightblue
+          hover:bg-gray-600
+        "
+      >
+        <i class="fas fa-file-alt"></i>
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="relative py-16 bg-white">
+      <div
+        class="hidden absolute top-0 inset-x-0 h-1/2 bg-white lg:block"
+        aria-hidden="true"
+      ></div>
+      <div class="max-w-7xl mx-auto bg-gray-200 lg:bg-transparent lg:px-8">
+        <div class="lg:grid lg:grid-cols-12">
+          <div
+            class="
+              relative
+              z-10
+              lg:col-start-1
+              lg:row-start-1
+              lg:col-span-4
+              lg:py-16
+              lg:bg-transparent
+            "
+          >
+            <div
+              class="absolute inset-x-0 h-1/2 bg-white lg:hidden"
+              aria-hidden="true"
+            ></div>
+            <div class="max-w-sm mx-auto px-4 sm:px-6 lg:p-0">
+              <div class="aspect-w-1 aspect-h-1">
+                <img
+                  class="object-cover object-center rounded-3xl shadow-2xl"
+                  src="/assets/stephanie_cunnane.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="
+              relative
+              bg-gray-200
+              lg:col-start-3
+              lg:row-start-1
+              lg:col-span-10
+              lg:rounded-3xl
+              lg:grid
+              lg:grid-cols-10
+              lg:items-center
+            "
+          >
+            <div
+              class="
+                relative
+                max-w-md
+                mx-auto
+                py-12
+                px-4
+                sm:max-w-3xl sm:py-16 sm:px-6
+                lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6
+              "
+            >
+              <h2
+                class="text-3xl font-extrabold text-gray-900"
+                id="join-heading"
+              >
+                Hi, I'm Stephanie Cunnane.
+              </h2>
+              <h4 class="text-xl text-gray-500 mt-1">
+                Los Angeles, California
+              </h4>
+              <p class="text-lg text-gray-900 mt-6">
+                I'm a software engineer in Los Angeles, California, with
+                experience in JavaScript/Node.js, Ruby, PostgreSQL, AWS, Docker
+                and React.
+              </p>
+              <p class="text-lg text-gray-900 mt-6">
+                Most recently, I built
+                <a
+                  class="text-grouparooblue hover:text-airbytepurple"
+                  href="https://monsoon-load-testing.github.io/"
+                  target="_blank"
+                  >Monsoon</a
+                >, an open-source, serverless framework for running
+                browser-based load tests in the cloud.
+              </p>
+              <a
+                class="
+                  mt-6
+                  block
+                  w-full
+                  py-3
+                  px-5
+                  text-center
+                  bg-midnightblue
+                  border border-transparent
+                  rounded-md
+                  shadow-md
+                  text-base
+                  font-medium
+                  text-white
+                  hover:opacity-70
+                  sm:inline-block sm:w-auto
+                "
+                href="assets/Stephanie_L_Cunnane_Resume.pdf"
+                target="_blank"
+                ><span class="text-xl mr-3"
+                  ><i class="fas fa-file-alt"></i></span
+                >Resume</a
+              >
+              <a
+                class="
+                  mt-6
+                  sm:mx-2
+                  block
+                  w-full
+                  py-3
+                  px-5
+                  text-center
+                  bg-grouparooblue
+                  border border-transparent
+                  rounded-md
+                  shadow-md
+                  text-base
+                  font-medium
+                  text-white
+                  hover:bg-airbytepurple
+                  sm:inline-block sm:w-auto
+                "
+                href="https://monsoon-load-testing.github.io/case-study"
+                target="_blank"
+                >Read Monsoon Case Study</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monsoon -->
+    <div class="relative py-16">
+      <div
+        class="hidden absolute top-0 inset-x-0 h-1/2 lg:block"
+        aria-hidden="true"
+      ></div>
+      <div class="bg-gradient-to-r from-airbytepurple to-grouparooblue">
+        <div
+          class="
+            max-w-7xl
+            mx-auto
+            lg:to-transparent lg:from-transparent lg:bg-transparent lg:px-8
+          "
+        >
+          <div class="lg:grid lg:grid-cols-12">
+            <div
+              class="
+                relative
+                z-10
+                lg:col-start-1
+                lg:row-start-1
+                lg:col-span-4
+                lg:py-16
+                lg:bg-transparent
+              "
+            >
+              <div
+                class="absolute inset-x-0 h-1/2 bg-white lg:hidden"
+                aria-hidden="true"
+              ></div>
+              <div class="max-w-sm mx-auto px-4 sm:px-6 lg:p-0">
+                <div class="aspect-w-2 aspect-h-1">
+                  <img
+                    class="
+                      object-cover object-center
+                      bg-white
+                      rounded-3xl
+                      shadow-2xl
+                    "
+                    src="/assets/monsoon.png"
+                    alt="Monsoon logo"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="
+                relative
+                lg:col-start-3
+                lg:row-start-1
+                lg:col-span-10
+                lg:rounded-3xl
+                lg:grid
+                lg:grid-cols-10
+                lg:items-center
+                lg:py-12
+              "
+            >
+              <div
+                class="
+                  relative
+                  max-w-md
+                  mx-auto
+                  py-12
+                  px-4
+                  sm:max-w-3xl sm:py-16 sm:px-6
+                  lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6
+                "
+              >
+                <p class="text-2xl text-white mt-6">
+                  Monsoon allows software engineers to easily load test their
+                  single-page application in anticipation of traffic spikes or
+                  overall business growth. Monsoon can simulate loads of up to
+                  20,000 concurrent users, and tests can be of any duration,
+                  from minutes to weeks or longer. Users can also see their load
+                  test results visualized in a near real-time dashboard.
+                </p>
+                <br />
+                <div class="wrap mx-auto">
+                  <div class="grid grid-rows-6 grid-cols-5">
+                    <div class="row-start-6 col-start-1 col-span-5 self-end">
+                      <img
+                        class="object-cover rounded-lg"
+                        src="/assets/weather-channel-dashboard.png"
+                        alt="Weather Channel dashboard"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    class="
+                      mt-6
+                      sm:mx-2
+                      block
+                      w-full
+                      py-3
+                      px-5
+                      text-center
+                      bg-white
+                      border border-transparent
+                      rounded-md
+                      shadow-md
+                      text-base
+                      font-medium
+                      text-grouparooblue
+                      hover:bg-white hover:text-airbytepurple
+                      sm:inline-block sm:w-auto
+                    "
+                    href="https://monsoon-load-testing.github.io/case-study"
+                    target="_blank"
+                    >Read Monsoon Case Study</a
+                  >
+                  <a
+                    class="
+                      mt-6
+                      sm:mx-2
+                      block
+                      w-full
+                      py-3
+                      px-5
+                      text-center
+                      bg-white
+                      border border-transparent
+                      rounded-md
+                      shadow-md
+                      text-base
+                      font-medium
+                      text-grouparooblue
+                      hover:bg-white hover:text-airbytepurple
+                      sm:inline-block sm:w-auto
+                    "
+                    href="https://tapestry-pipeline.github.io/case-study#toc-presentation"
+                    target="_blank"
+                    >Watch the Presentation</a
+                  >
+                </div>
+
+                <!-- <div>
+                <img class="rounded-lg shadow-lg" src="images/fullarchitecture_white.png" alt="">
+              </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Projects -->
+    <div class="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8">
+      <div class="absolute inset-0">
+        <div class="bg-white h-1/3 sm:h-2/3"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto">
+        <div class="text-center">
+          <h2
+            class="
+              text-3xl
+              tracking-tight
+              font-extrabold
+              text-gray-900
+              sm:text-4xl
+            "
+          >
+            Other Projects
+          </h2>
+        </div>
+        <div
+          class="
+            mt-12
+            max-w-lg
+            mx-auto
+            grid
+            gap-10
+            xl:grid-cols-3
+            lg:grid-cols-3
+            md:grid-cols-2 md:max-w-none
+          "
+        >
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/medium_post.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  High-Quality Thinking for Software Engineers
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  A massive Medium article that gives insight into how I think
+                  and approach problems
+                </p>
+                <p class="mt-3 text-base text-airbytepurple">
+                  <a href="https://medium.com/@stephaniecunnane/high-quality-thinking-for-software-engineers-c38d1a58c5ef" target="_blank">Read the article here</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/codewars_logo.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  Codewars Global Leaderboard
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  I love challenges, coding challenges in particular. Currently I'm #170 on the Codewars global leaderboard (top 0.047%)
+                </p>
+                <p class="mt-3 text-base text-airbytepurple">
+                  <a href="https://www.codewars.com/users/StephanieCunnane" target="_blank">See my Codewars profile here</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/airline_routes.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  Airline Routing App
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  An airline routing app that uses Djikstra's Algorithm to find the shortest path
+                </p>
+                <p class="mt-3 text-base text-airbytepurple">
+                  React, JavaScript
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/request_bucket.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  Request Bucket
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  A RequestBin-like tool for receiving and debugging webhooks
+                </p>
+                <p class="mt-3 text-base text-airbytepurple">
+                  Node.js/Express, MongoDB, TailwindCSS, Webhooks
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/ebook_reader.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  eBook Reader App
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  An app for, you guessed it, reading ebooks!
+                </p>
+                <p class="mt-3 text-base text-airbytepurple">
+                  Ruby, Sinatra, ERB
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0 p-6 flex justify-center bg-gray-200">
+              <img
+                class="h-40 drop-shadow-lg filter object-scale-down"
+                src="/assets/todo_list_app.png"
+                alt=""
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-xl font-semibold text-gray-900 mt-2">
+                  Todo List App
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  An interactive todo list manager. Vanilla JavaScript frontend, Express API backend
+                </p>
+                <p class="mt-3 text-base text-airbytepurple">
+                  Node.js, Express, Handlebars
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-grouparooblue">
+      <div class="mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+          <span class="block">How to reach me</span>
+        </h2>
+        <p class="mt-4 mb-4 text-lg leading-6 text-gray-200">
+          I'm currently open to new opportunities, so please reach out if you think
+          I'd be a good fit for your team.
+        </p>
+        <div class="flex items-center justify-center flex-wrap">
+          <a
+            href="mailto:stephanie.cunnane@gmail.com"
+            class="
+              w-2/5
+              mt-4
+              mx-2
+              inline-flex
+              items-center
+              shadow-md
+              justify-center
+              px-5
+              py-2
+              border border-transparent
+              font-medium
+              rounded-md
+              text-midnightblue
+              bg-white
+              hover:bg-gray-300
+              sm:w-auto
+            "
+            target="_blank"
+          >
+            <span class="text-xl mr-3"><i class="fas fa-envelope"></i></span
+            >Email
+          </a>
+          <a
+            href="https://www.linkedin.com/in/stephaniecunnane/"
+            class="
+              w-2/5
+              mt-4
+              mx-2
+              inline-flex
+              items-center
+              shadow-md
+              justify-center
+              px-5
+              py-2
+              border border-transparent
+              font-medium
+              rounded-md
+              text-midnightblue
+              bg-white
+              hover:bg-gray-300
+              sm:w-auto
+            "
+            target="_blank"
+          >
+            <span class="text-xl mr-3"><i class="fab fa-linkedin"></i></span
+            >LinkedIn
+          </a>
+          <a
+            href="https://github.com/StephanieCunnane"
+            class="
+              w-2/5
+              mt-4
+              mx-2
+              inline-flex
+              items-center
+              shadow-md
+              justify-center
+              px-5
+              py-2
+              border border-transparent
+              font-medium
+              rounded-md
+              text-midnightblue
+              bg-white
+              hover:bg-gray-300
+              sm:w-auto
+            "
+            target="_blank"
+          >
+            <span class="text-xl mr-3"><i class="fab fa-github"></i></span
+            >GitHub
+          </a>
+          <a
+            href="assets/Stephanie_L_Cunnane_Resume.pdf"
+            target="_blank"
+            class="
+              w-2/5
+              mt-4
+              mx-2
+              inline-flex
+              items-center
+              shadow-md
+              justify-center
+              px-5
+              py-2
+              border border-transparent
+              font-medium
+              rounded-md
+              text-midnightblue
+              bg-white
+              hover:bg-gray-300
+              sm:w-auto
+            "
+          >
+            <span class="text-xl mr-3"><i class="fas fa-file-alt"></i></span
+            >Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
